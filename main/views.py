@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import requests
@@ -40,3 +40,8 @@ def me(request):
     }
 
     return Response(response_data, content_type="application/json")
+
+
+@api_view(['GET'])
+def home(request):
+    return redirect("me")
