@@ -36,7 +36,7 @@ def me(request):
             "stack": "Python/Django",
         },
         "timestamp": datetime.now(timezone.utc).isoformat(),
-        "cat_fact": cat_fact
+        "fact": cat_fact
     }
 
     return Response(response_data, content_type="application/json")
